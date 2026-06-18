@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bangalore Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="page-wrapper">
+    <!-- Header -->
+    <div class="page-header">
+        <div class="eyebrow">Bangalore Real Estate</div>
+        <h1>Home Price <span>Prediction</span></h1>
+        <p class="subtitle">Estimate your property value instantly</p>
+    </div>
+
+    <!-- Form Card -->
+    <div class="glass-card">
+        <form>
+            <!-- Area Input -->
+            <div class="field-group">
+                <label class="field-label">Area (Square Feet)</label>
+                <input type="text" id="uiSqft" name="Squareft" value="1000" placeholder="Enter area in sq ft">
+            </div>
+
+            <!-- BHK Selection -->
+            <div class="field-group">
+                <label class="field-label">BHK</label>
+                <div class="switch-field">
+                    <input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
+                    <label for="radio-bhk-1">1</label>
+                    <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
+                    <label for="radio-bhk-2">2</label>
+                    <input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+                    <label for="radio-bhk-3">3</label>
+                    <input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+                    <label for="radio-bhk-4">4</label>
+                    <input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
+                    <label for="radio-bhk-5">5</label>
+                </div>
+            </div>
+
+            <!-- Bathroom Selection -->
+            <div class="field-group">
+                <label class="field-label">Bathrooms</label>
+                <div class="switch-field">
+                    <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+                    <label for="radio-bath-1">1</label>
+                    <input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+                    <label for="radio-bath-2">2</label>
+                    <input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+                    <label for="radio-bath-3">3</label>
+                    <input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+                    <label for="radio-bath-4">4</label>
+                    <input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
+                    <label for="radio-bath-5">5</label>
+                </div>
+            </div>
+
+            <!-- Location Selection -->
+            <div class="field-group">
+                <label class="field-label">Location</label>
+                <select id="uiLocations">
+                    <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+                </select>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Submit Button -->
+            <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+
+            <!-- Result Display -->
+            <div id="uiEstimatedPrice" class="result">
+                <h2></h2>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="page-footer">
+        Powered by Machine Learning • Real Estate Analysis
+    </div>
+</div>
+</body>
+</html>
