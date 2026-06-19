@@ -3,8 +3,11 @@
 # platform: win-64
 # created-by: conda 26.1.1
 Flask==3.1.0
-numpy==1.26.4
-pandas==2.2.3
 scikit-learn==1.4.2
 gunicorn==23.0.0
 scipy==1.11.4
+pip>=25.0
+setuptools>=75
+wheel>=0.45
+numpy==2.2.6
+pandas==2.2.3
