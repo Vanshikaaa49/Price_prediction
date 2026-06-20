@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import util
-from logger_config import setup_logger
+from server import util
+from server.logger_config import setup_logger
 
 app = Flask(__name__)
 CORS(app)
